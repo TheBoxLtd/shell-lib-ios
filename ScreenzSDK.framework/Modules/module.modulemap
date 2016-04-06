@@ -1,0 +1,6 @@
+framework module ScreenzSDK {
+  umbrella header "ScreenzSDK.h"
+
+  export *
+  module * { export * }
+}

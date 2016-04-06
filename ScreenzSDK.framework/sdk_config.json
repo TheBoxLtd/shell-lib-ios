@@ -1,0 +1,24 @@
+{
+    "apiBaseURL_prod": "http://origin.rtp.scrnz.com/",
+    "webviewURL_prod": "http://api.rtp.scrnz.com/front/mt-webview/",
+    "apiBaseURL_dev": "http://mcms.dev.scrnz.com/",
+    "webviewURL_dev": "http://mcms.dev.scrnz.com/front/mt-webview/",
+    "preRegister": "register/1/pre-register",
+    "pushReceived": "push/1/received",
+    "getData": "lineup/1/native-data",
+    "wvBgColor" : "#333333",
+    "os": {
+        "ios": {
+            "location_enabled":true,
+            "autoRotate":false
+        }
+    },
+    "social": {
+        "facebook": {
+            "permissions": [
+                            "user_friends",
+                            "email"
+                            ]
+        }
+    }
+}
