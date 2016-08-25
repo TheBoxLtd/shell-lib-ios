@@ -1,8 +1,8 @@
 # Screenz SDK
 
-Screenz SDK allows you to implement your own Screenz client that will live in the Screenz environment.
+Screenz SDK allows for the implementation of your own Screenz client that will live in the Screenz environment.
 
-This environment needs a server side component, that will be provided by the infraestructure department in order to create the app in the server, which will be referenced by an id in the framework.
+This environment needs a server side component, that will be provided as a service by Screenz in order to create the app in the server, which will be referenced by an id in the framework.
 
 In order to make your own Screenz client we will guide you through the following steps:
   - Screenz Framework
@@ -11,7 +11,7 @@ In order to make your own Screenz client we will guide you through the following
 
 #### Adding the Screenz Framework
 
-First of all create the single view application in Xcode. After that you must add the ScreenzSDK.framework to the project like the following screenshot
+First of all create the single view application in Xcode. After that you must add the ScreenzSDK.framework to the project as in the following screenshot
 
 ![](http://www.mvdforge.com/images/screenz_projectConfigScreen.png)
 
@@ -19,7 +19,7 @@ First of all create the single view application in Xcode. After that you must ad
 
 #### Adding the application configuration file
 
-The framework use a JSON configuration file in order to implement the different functionalities based locally in the client and to send it over to the server. That configuration file looks similar to the following
+The framework uses a JSON configuration file in order to implement the different client functionalities and to send it to the server. This configuration file looks similar to the following:
 
 ```sh
 {
@@ -40,7 +40,7 @@ The framework use a JSON configuration file in order to implement the different 
 }
 ```
 
-We will discuss every item in the configuration file later, but in order to integrate this on the client you just need to add the file to the project like any other file.
+We will discuss every item in the configuration file later, but in order to integrate this in the client you just need to add the file to the project like any other file.
 
 #### Framework configuration code
 
@@ -145,15 +145,15 @@ Now, you AppDelegate.m should look something like the following (copy and replac
 ```
 
 In the 'application:didFinishLaunchingWithOptions:' we made two changes. First of all (and always should be the first thing to do) initialize the SDK with your configuration file. Your entry point for the SDK will be the ScreenzSDKManager instance, this will be always your way to communicate with the framework. As you can see we use the sharedInstance of this object but you can create and maintain your own instances if needed.
-The loadConfigurationFromJSONFile just do that, take the name of the JSON file (must end with .json), read it and configure the framework.
+The loadConfigurationFromJSONFile takes the name of the JSON file (must end with .json), reads it and configures the framework.
 
 After configuring the framework we need to give control over the app to the SDK. To do that we just set the ScreenzSDKLoadingViewController as the rootViewController of our app.
 
-This two basic steps are the core of the Screenz Framework and should be done always in the exact same secuence as explained.
+These two basic steps are the core of the Screenz Framework and should be done always in the exact same secuence as explained.
 
-There were a couple more changes done, which basically were let the framework handle push notifications from the server and external opening of the app.
+The following changes should let the framework handle push notifications from the server and launch the app externally.
 
-For notifications we just changed the following callbacks
+For notifications, just change the following callbacks
 
 ```objective-c
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
@@ -178,7 +178,7 @@ For notifications we just changed the following callbacks
 }
 ```
 
-And for handling app openings the following callback
+And for launching app esternally, apply the following callback:
 
 ```objective-c
 - (BOOL)application: (UIApplication *)application openURL: (NSURL *)url sourceApplication: (NSString *)sourceApplication annotation: (id)annotation {
@@ -186,11 +186,11 @@ And for handling app openings the following callback
 }
 ```
 
-After this 3 steps, the application is ready to run. Enjoy!
+After these 3 steps, the application is ready to run. Enjoy!
 
 ## Application Configuration File
 
-This JSON file is the one used to configure all the client and server aspects of the framework. The entire JSON file should look something like this
+This JSON file is the one used to configure all  client and server aspects of the framework. The entire JSON file should look something like this
 
 ```sh
 {
@@ -237,9 +237,9 @@ This JSON file is the one used to configure all the client and server aspects of
 
 **dev_env:** *[Boolean, Optional]* Specifies if we are using the development enviroment or not, mostly using during development and should probably be set to false (default value if not present).
 
-**useOnPageLoaded:** *[Boolean, Optional]* This should be refered by the server, it set if the webapp supports this callback or not (false by default).
+**useOnPageLoaded:** *[Boolean, Optional]* This should be referred to by the server, it set to true the application shall fire this callback (false by default).
 
-**social:** *[Array, Optional]* Enumerates the configuration for the different social networks supported by the framework. Supported networks: Facebook, Twitter, Instagram, Google and Disney.
+**social:** *[Array, Optional]* Enumerates the configuration for the different social networks supported by the framework. Supported networks: Facebook, Twitter, Google Plus.
 
 **os.ios:** *[Array, Optional]* Platform specific features:
   - app_status_bar_hidden *[Boolean]*: App status bar hidden yes/no
@@ -250,26 +250,24 @@ This JSON file is the one used to configure all the client and server aspects of
 
 ## Screenz SDK Components
 
-We are going to explain the main components of the SDK for further understanding of the framework itself and the work under the hood in the SDK.
-
 ### Screenz SDK Manager
-This manager provides an unified entry point for the framework and handle the configuration and initialization of the framework itself.
+This component provides a unified entry point for the framework and handles the configuration and initialization of the framework.
 
-Was build to provide all the functionality for the framework and provide options to use it as a shared instance accros the entire application, or to create multiple instances to handle independently.
+It's built to provide all the functionality for the framework and provide options to use it as a shared instance across the entire application, or to create multiple instances to handle independently.
 
-The main methods for this class are the one in charge of load the application configuration to the SDK, this methos are *loadConfigurationFromJSONFile* and *loadConfigurationFromJSONString*. Both methods do the same, load the *appConfiguration* property based on a JSON file or string. 
+The main methods for this class are responsible to load the application configuration to the SDK. These methods are *loadConfigurationFromJSONFile* and *loadConfigurationFromJSONString*. Both methods do the same, load the *appConfiguration* property based on a JSON file or string. 
 
-Also provides the methods to handle notifications and application launch.
+This component also provides the methods to handle notifications and application launch.
 
-Besides this methods, the manager store data to be used during the life of the application. As we know, it stores the application configuration but also the server configuration (*serverData*), SDK configuration (*sdkConfiguration*) and scheme values (*schemeValues*).
+Besides these methods, the manager stores data to be used during the life of the application. It stores the application and the server configuration (*serverData*), SDK configuration (*sdkConfiguration*) and scheme values (*schemeValues*).
  
 ### Screenz SDK Loading View Controller
 
-The Loading VC is in charge of start the application and load the web application. Bascially it set the splash screen, load the data from the server to the SDK manager, setup the notifications and all the social networks and get current location. After all this setup is done, it will show the Main VC where the web app is loaded.
+This component is responsible to start the application and load the application content. Bascially it sets the splash screen, loads the data from the server to the SDK manager, sets up the notifications and all the social networks and gets current location. After setup is complete, it will show the Main View where the web app is loaded.
 
 ### Screenz SDK Storage Keys
 
-During the life of the app, the SDK store some data in the User Configuration settings. These are the keys in the User Configuration settings that you can access if needed.
+During the app lifecycle, the SDK stores some data in the User Configuration settings. These are the keys in the User Configuration settings that you can access if needed.
 
 | Key Name | Description |
 |--- | --- |
