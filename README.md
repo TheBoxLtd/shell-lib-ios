@@ -1,4 +1,4 @@
-# Screenz SDK
+# Screenz iOS SDK
 
 Screenz SDK allows for the implementation of your own Screenz client that will live in the Screenz environment.
 
@@ -78,14 +78,14 @@ Now, you AppDelegate.m should look something like the following (copy and replac
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
+
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    
+
     //Initialize the SDK Manager shared instance
     ScreenzSDKManager* manager = [ScreenzSDKManager sharedInstance];
     [manager loadConfigurationFromJSONFile:@"cn-data-dev"];
     /////
-    
+
     //Set the view controller
     self.viewController = [[ScreenzSDKLoadingViewController alloc] initVC];
     self.window.rootViewController = self.viewController;
@@ -255,12 +255,12 @@ This component provides a unified entry point for the framework and handles the 
 
 It's built to provide all the functionality for the framework and provide options to use it as a shared instance across the entire application, or to create multiple instances to handle independently.
 
-The main methods for this class are responsible to load the application configuration to the SDK. These methods are *loadConfigurationFromJSONFile* and *loadConfigurationFromJSONString*. Both methods do the same, load the *appConfiguration* property based on a JSON file or string. 
+The main methods for this class are responsible to load the application configuration to the SDK. These methods are *loadConfigurationFromJSONFile* and *loadConfigurationFromJSONString*. Both methods do the same, load the *appConfiguration* property based on a JSON file or string.
 
 This component also provides the methods to handle notifications and application launch.
 
 Besides these methods, the manager stores data to be used during the life of the application. It stores the application and the server configuration (*serverData*), SDK configuration (*sdkConfiguration*) and scheme values (*schemeValues*).
- 
+
 ### Screenz SDK Loading View Controller
 
 This component is responsible to start the application and load the application content. Bascially it sets the splash screen, loads the data from the server to the SDK manager, sets up the notifications and all the social networks and gets current location. After setup is complete, it will show the Main View where the web app is loaded.
@@ -281,8 +281,3 @@ During the app lifecycle, the SDK stores some data in the User Configuration set
 | **kSSDK_LOCAL_CONFIG_INSid** | Instagram client id |
 | **kSSDK_LOCAL_CONFIG_FBid** | Facebook app id |
 | **kSSDK_LOCAL_CONFIG_Did** | Disney client id |
-
-
-
-
-
