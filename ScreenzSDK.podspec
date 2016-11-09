@@ -21,11 +21,11 @@ Pod::Spec.new do |s|
 Implementing Screenz functionality in your own app
                        DESC
 
-  s.homepage         = 'https://github.com/TheBoxLtd/screenz_ios_shell_pod'
+  s.homepage         = 'https://github.com/TheBoxLtd/shell-lib-ios'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'Copyright', :file => 'LICENSE'}
   s.author           = { 'Mathias Caldas' => 'mathiascaldas@gmail.com' }
-  s.source           = { :git => 'https://github.com/TheBoxLtd/screenz_ios_shell_pod.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/TheBoxLtd/shell-lib-ios.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
