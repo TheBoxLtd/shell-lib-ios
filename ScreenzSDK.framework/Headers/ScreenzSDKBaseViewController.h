@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "ScreenzSDKManager.h"
+#import "ScreenzSDKMediaUploadModel.h"
 
 @interface ScreenzSDKBaseViewController : UIViewController
 
@@ -36,6 +37,15 @@
  */
 
 -(void)loadNavigatorWithData:(NSString*)data;
+
+/**
+ * Load the media uploader
+ * @author Sebastian Castro
+ *
+ * @param data info of the uploading
+ */
+
+-(void)loadVideoUploaderWithData:(ScreenzSDKMediaUploadModel*)data;
 
 /**
  * Get the current SDK Manager instance. If no Manager is assigned to the VC it returns the shared instance.

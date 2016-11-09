@@ -22,6 +22,7 @@ FOUNDATION_EXPORT const unsigned char ScreenzSDKVersionString[];
 #import <ScreenzSDK/ScreenzSDKStorageKeys.h>
 #import <ScreenzSDK/ScreenzSDKBaseViewController.h>
 #import <ScreenzSDK/ScreenzSDKLoadingViewController.h>
+#import <ScreenzSDK/ScreenzSDKMediaUploadModel.h>
 
 /**
  * - Libraries versions -
