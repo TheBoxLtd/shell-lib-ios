@@ -11,13 +11,17 @@ In order to make your own Screenz client we will guide you through the following
 
 #### Adding the Screenz Framework
 
-First of all create the single view application in Xcode. After that you must add the ScreenzSDK.framework to the project as in the following screenshot
-
-![](http://www.mvdforge.com/images/screenz_projectConfigScreen.png)
+First of all create the single view application in Xcode. 
 
 **Important:** the framework requires iOS 8.0+, so remember to set "Deployment Target" to 8.0 or higher.
 
 #### Adding the application configuration file
+
+### [CocoaPods](https://github.com/CocoaPods/CocoaPods)
+Add the following line in your `Podfile`.
+```
+pod "ScreenzSDK"
+```
 
 The framework uses a JSON configuration file in order to implement the different client functionalities and to send it to the server. This configuration file looks similar to the following:
 
@@ -43,10 +47,6 @@ The framework uses a JSON configuration file in order to implement the different
 We will discuss every item in the configuration file later, but in order to integrate this in the client you just need to add the file to the project like any other file.
 
 #### Framework configuration code
-
-At this point your project should look something like this
-
-![](http://www.mvdforge.com/images/screenz_fullProjectView.png)
 
 Go to your AppDelegate.h file and replace the code with
 
