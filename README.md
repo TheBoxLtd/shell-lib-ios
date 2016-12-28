@@ -197,6 +197,7 @@ This JSON file is the one used to configure all  client and server aspects of th
     "pid": <your application id>,
     "dev_env" : false,
     "useOnPageLoaded" : true,
+    "video_upload_key" : <your video upload api key>,
     "social": {
         "facebook": {
             "appID": "<fb appid>",
@@ -247,6 +248,8 @@ This JSON file is the one used to configure all  client and server aspects of th
   - web_data_mode *[String]*: Data mode from server, should probably always use "production"
 
 **glossary:** *[Array, Optional]* Glossary of terms used in the app that can be configured by the client. Currently only supports the "noConnectionError" message.
+
+**video_upload_key:** *[String, Optional]* API Key for the upload video service (like cameraTag API key).
 
 ## Screenz SDK Components
 
