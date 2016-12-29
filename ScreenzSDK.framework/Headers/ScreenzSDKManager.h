@@ -83,5 +83,9 @@
  */
 -(BOOL)processApplicaitonOpenURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation configurationFile:(NSString*)configFile;
 
+/**
+ * Notifies the manager that something in the configuration has changed
+ */
+-(void)configurationChanged;
 @end
 

@@ -91,7 +91,7 @@
 
 @property (strong, nonatomic) NSString *apiBaseURL;
 @property (strong, nonatomic) NSString *webviewURL;
-@property (strong, nonatomic) NSString *cameraTag_api_key;
+@property (strong, nonatomic) NSString *video_upload_key;
 
 @property (assign, nonatomic) BOOL     dev_env;
 @property (assign, nonatomic) BOOL     useOnPageLoaded;
