@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ScreenzSDK'
-  s.version          = '1.2.2'
+  s.version          = '1.3.0'
   s.summary          = 'Screenz Framework.'
 
 # This description is used to generate tags and improve search results.
@@ -31,7 +31,7 @@ Implementing Screenz functionality in your own app
   s.ios.deployment_target = '8.0'
 
   s.ios.vendored_frameworks = 'ScreenzSDK.framework'
-  
+
   # s.resource_bundles = {
   #   'ScreenzSDK' => ['ScreenzSDK/Assets/*.png']
   # }
