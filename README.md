@@ -46,6 +46,25 @@ The framework uses a JSON configuration file in order to implement the different
 
 We will discuss every item in the configuration file later, but in order to integrate this in the client you just need to add the file to the project like any other file.
 
+#### Adding camera, mic, library and location permissions
+
+Need to add the following keys with the desired value to be shown to the user in the app Info.plist
+
+```xml
+
+<key>NSCameraUsageDescription</key>
+<string>Camera</string>
+<key>NSLocationUsageDescription</key>
+<string></string>
+<key>NSLocationWhenInUseUsageDescription</key>
+<string></string>
+<key>NSMicrophoneUsageDescription</key>
+<string>Microphone</string>
+<key>NSPhotoLibraryUsageDescription</key>
+<string>Photos</string>
+
+```
+
 #### Framework configuration code
 
 Go to your AppDelegate.h file and replace the code with
@@ -178,7 +197,7 @@ For notifications, just change the following callbacks
 }
 ```
 
-And for launching app esternally, apply the following callback:
+And for launching app externally, apply the following callback:
 
 ```objective-c
 - (BOOL)application: (UIApplication *)application openURL: (NSURL *)url sourceApplication: (NSString *)sourceApplication annotation: (id)annotation {
@@ -210,15 +229,6 @@ This JSON file is the one used to configure all  client and server aspects of th
         },
         "google": {
             "clientID": "<google id>.apps.googleusercontent.com"
-        },
-        "instagram": {
-            "clientID": "<ins id>",
-            "secret": "<ins secret>",
-            "redirectUri" : "<ins redirect url>"
-        },
-        "disney": {
-            "disney_clientId": "<disney id>",
-            "disney_environment": "<environment>"
         }
     },
     "os": {
@@ -283,4 +293,3 @@ During the app lifecycle, the SDK stores some data in the User Configuration set
 | **kSSDK_LOCAL_CONFIG_TWid** | Twiter key |
 | **kSSDK_LOCAL_CONFIG_INSid** | Instagram client id |
 | **kSSDK_LOCAL_CONFIG_FBid** | Facebook app id |
-| **kSSDK_LOCAL_CONFIG_Did** | Disney client id |
