@@ -57,8 +57,17 @@
  */
 - (id)initFromJSONString:(NSString*)data withScheme:(ScreenzSDKSchemeValues*)scheme;
 
+
+/**
+ * Validate is the pid is part of the pid array, which in that case is a valid pid to use
+ * @author Sebastian Castro
+ *
+ * @param pid to validate
+ */
+-(BOOL)isValidPID:(int)pid;
+
 //Properties matching JSON data
-@property (nonatomic) int pid;
+@property (nonatomic) NSArray<NSNumber*> *pids;
 @property (nonatomic) int splashDelay;
 
 @property (strong, nonatomic) NSString *twitter_key;

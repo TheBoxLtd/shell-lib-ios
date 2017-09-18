@@ -57,4 +57,6 @@
 
 -(ScreenzSDKManager*)getScreenzSDK;
 
+-(void)loadBaseURL;
+
 @end

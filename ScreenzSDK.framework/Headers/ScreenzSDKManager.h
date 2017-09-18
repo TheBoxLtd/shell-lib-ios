@@ -87,5 +87,33 @@
  * Notifies the manager that something in the configuration has changed
  */
 -(void)configurationChanged;
+
+/**
+ * Rerurn the current PID
+ */
+-(int)getCurrentPID;
+
+
+/**
+ * Rerurn the current PID as NSNumber
+ */
+-(NSNumber *)getCurrentPIDAsNumber;
+
+/**
+ * Sets the current pid, if valid
+ *
+ * @param pid to set
+ * @return YES if the pid is correct and changed, NO in other case
+ */
+-(BOOL)changeCurrentPID:(int)pid;
+
+
+/**
+ * Sets extra data to read by the web-app
+ *
+ * @param data(as string) to store
+ */
+-(void)setExtraData:(NSString*)data;
+
 @end
 
