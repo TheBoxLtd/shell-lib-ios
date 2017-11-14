@@ -27,7 +27,7 @@ The framework uses a JSON configuration file in order to implement the different
 
 ```sh
 {
-    "pid": <your application id>,
+    "pids": [<your application id>],
     "dev_env" : false,
     "useOnPageLoaded" : true,
     "social": {
