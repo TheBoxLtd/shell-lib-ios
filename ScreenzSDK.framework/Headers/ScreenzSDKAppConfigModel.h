@@ -98,6 +98,9 @@
 @property (strong, nonatomic) NSString *haKey;
 @property (strong, nonatomic) NSString *nRelicKey;
 
+@property (strong, nonatomic) NSString *appsFlyerKey;
+@property (strong, nonatomic) NSString *appleAppID;
+
 @property (strong, nonatomic) NSString *apiBaseURL;
 @property (strong, nonatomic) NSString *webviewURL;
 @property (strong, nonatomic) NSString *video_upload_key;

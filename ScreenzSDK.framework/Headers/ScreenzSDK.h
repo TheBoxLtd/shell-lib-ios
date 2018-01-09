@@ -33,13 +33,13 @@ FOUNDATION_EXPORT const unsigned char ScreenzSDKVersionString[];
  *
  * AFNetworking 3.1.0 http://afnetworking.com/
  *
- * WebViewJavascriptBridge 4.1.5 https://github.com/marcuswestin/WebViewJavascriptBridge
+ * WebViewJavascriptBridge 6.0.3 https://github.com/marcuswestin/WebViewJavascriptBridge
  * 
  * SDWebImage 4.1.0 https://github.com/rs/SDWebImage
  *
  * FCUUID 1.3.1 (UICKeyChainStore 2.1.1)  https://github.com/fabiocaccamo/FCUUID
  *
- * DDVersion 1.1.1 https://github.com/Dids/DDVersion
+ * DDVersion 1.1.2 https://github.com/Dids/DDVersion
  *
  * DDCarrier 1.0.4 https://github.com/Dids/DDCarrier
  *
@@ -49,6 +49,8 @@ FOUNDATION_EXPORT const unsigned char ScreenzSDKVersionString[];
  *
  * Google Sign-In SDK 4.1.0 https://developers.google.com/identity/sign-in/ios/sdk/
  *
- * Facebook SDK 4.27.0 https://developers.facebook.com/docs/ios/getting-started#sdk
+ * Facebook SDK 4.28.0 https://developers.facebook.com/docs/ios/getting-started#sdk
+ *
+ * AppsFlyer SDK 4.8.1 https://support.appsflyer.com/hc/en-us/articles/207032066-AppsFlyer-SDK-Integration-iOS
  *
  */
