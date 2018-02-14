@@ -207,6 +207,24 @@ And for launching app externally, apply the following callback:
 
 After these 3 steps, the application is ready to run. Enjoy!
 
+#### Sending Data to the webview
+
+You can send any data that the webview needs to consume using the following method:
+ 
+```objective-c
+[manager setExtraData:@"data to store"];
+```
+
+In this example, the webview will have access to "data to store" when is run.
+This data needs to be set before launching the framework
+
+You can also set the page to be opened and pid with these methods:
+
+```objective-c
+[manager setLaunchPageID:@"[PAGEID]"];
+[manager changeCurrentPID:PID];
+```
+
 ## Application Configuration File
 
 This JSON file is the one used to configure all  client and server aspects of the framework. The entire JSON file should look something like this
