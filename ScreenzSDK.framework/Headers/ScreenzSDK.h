@@ -2,9 +2,6 @@
 //  ScreenzSDK.h
 //  ScreenzSDK
 //
-//  Created by Sebastian Castro on 2/4/16.
-//  Copyright © 2016 Screenz. All rights reserved.
-//
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>

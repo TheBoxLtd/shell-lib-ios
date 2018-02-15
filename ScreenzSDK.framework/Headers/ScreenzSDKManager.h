@@ -115,5 +115,12 @@
  */
 -(void)setExtraData:(NSString*)data;
 
+/**
+ * Sets the pageId the webview should open on launch
+ *
+ * @param data(as string) to store
+ */
+-(void)setLaunchPageID:(NSString*)data;
+
 @end
 
