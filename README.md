@@ -160,6 +160,10 @@ Now, you AppDelegate.m should look something like the following (copy and replac
     return [[ScreenzSDKManager sharedInstance] processApplicaitonOpenURL:url sourceApplication:sourceApplication annotation:annotation configurationFile:JSON_DATA];
 }
 
+-(BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+    return [[ScreenzSDKManager sharedInstance] processApplicaitonOpenURL:url options:options configurationFile:JSON_DATA];
+}
+
 @end
 ```
 
@@ -202,6 +206,10 @@ And for launching app externally, apply the following callback:
 ```objective-c
 - (BOOL)application: (UIApplication *)application openURL: (NSURL *)url sourceApplication: (NSString *)sourceApplication annotation: (id)annotation {
     return [[ScreenzSDKManager sharedInstance] processApplicaitonOpenURL:url sourceApplication:sourceApplication annotation:annotation configurationFile:JSON_DATA];
+}
+
+-(BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+    return [[ScreenzSDKManager sharedInstance] processApplicaitonOpenURL:url options:options configurationFile:JSON_DATA];
 }
 ```
 
