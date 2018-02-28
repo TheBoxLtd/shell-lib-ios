@@ -44,10 +44,12 @@ FOUNDATION_EXPORT const unsigned char ScreenzSDKVersionString[];
  *
  * NSString-CompareToVersion 0.5.0 https://github.com/stijnster/NSString-compareToVersion
  *
- * Google Sign-In SDK 4.1.0 https://developers.google.com/identity/sign-in/ios/sdk/
+ * Google Sign-In SDK 4.1.2 https://developers.google.com/identity/sign-in/ios/sdk/
  *
- * Facebook SDK 4.28.0 https://developers.facebook.com/docs/ios/getting-started#sdk
+ * Facebook SDK 4.30.0 https://developers.facebook.com/docs/ios/getting-started#sdk
  *
- * AppsFlyer SDK 4.8.1 https://support.appsflyer.com/hc/en-us/articles/207032066-AppsFlyer-SDK-Integration-iOS
+ * AppsFlyer SDK 4.8.3 https://support.appsflyer.com/hc/en-us/articles/207032066-AppsFlyer-SDK-Integration-iOS
+ *
+ * Twitter Kit 3.3.0 https://github.com/twitter/twitter-kit-ios/wiki/Installation
  *
  */

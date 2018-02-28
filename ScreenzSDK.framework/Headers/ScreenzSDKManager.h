@@ -84,6 +84,11 @@
 -(BOOL)processApplicaitonOpenURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation configurationFile:(NSString*)configFile;
 
 /**
+ * Handle the open from url process within the app
+ */
+-(BOOL)processApplicaitonOpenURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options configurationFile:(NSString *)configFile;
+
+/**
  * Notifies the manager that something in the configuration has changed
  */
 -(void)configurationChanged;
