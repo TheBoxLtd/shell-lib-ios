@@ -66,6 +66,7 @@
 @property (strong, nonatomic) NSString *getData;
 @property (assign, nonatomic) BOOL     location_enabled;
 @property (assign, nonatomic) BOOL     autoRotate;
+@property (assign, nonatomic) BOOL     landscape;
 
 @property (strong, nonatomic) NSString *wvBgColor;
 
