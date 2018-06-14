@@ -24,11 +24,11 @@ FOUNDATION_EXPORT const unsigned char ScreenzSDKVersionString[];
 /**
  * - Libraries versions -
  *
- * Location Manager 4.2.0 https://github.com/intuit/LocationManager
+ * Location Manager 4.3.0 https://github.com/intuit/LocationManager
  *
  * JSONModel 1.2.0 https://github.com/icanzilb/JSONModel
  *
- * AFNetworking 3.1.0 http://afnetworking.com/
+ * AFNetworking 3.2.1 http://afnetworking.com/
  *
  * WebViewJavascriptBridge 6.0.3 https://github.com/marcuswestin/WebViewJavascriptBridge
  * 
@@ -46,9 +46,9 @@ FOUNDATION_EXPORT const unsigned char ScreenzSDKVersionString[];
  *
  * Google Sign-In SDK 4.1.2 https://developers.google.com/identity/sign-in/ios/sdk/
  *
- * Facebook SDK 4.30.0 https://developers.facebook.com/docs/ios/getting-started#sdk
+ * Facebook SDK 4.33.0 https://developers.facebook.com/docs/ios/getting-started#sdk
  *
- * AppsFlyer SDK 4.8.3 https://support.appsflyer.com/hc/en-us/articles/207032066-AppsFlyer-SDK-Integration-iOS
+ * AppsFlyer SDK 4.8.5 https://support.appsflyer.com/hc/en-us/articles/207032066-AppsFlyer-SDK-Integration-iOS
  *
  * Twitter Kit 3.3.0 https://github.com/twitter/twitter-kit-ios/wiki/Installation
  *
