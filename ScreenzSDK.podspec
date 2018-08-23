@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ScreenzSDK'
-  s.version          = '2.5.4'
+  s.version          = '3.0.0'
   s.summary          = 'Screenz Framework.'
 
 # This description is used to generate tags and improve search results.
@@ -28,7 +28,7 @@ Implementing Screenz functionality in your own app
   s.source           = { :git => 'https://github.com/TheBoxLtd/shell-lib-ios.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
   s.ios.vendored_frameworks = 'ScreenzSDK.framework'
 
