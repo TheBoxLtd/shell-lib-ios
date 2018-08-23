@@ -70,33 +70,12 @@
 @property (nonatomic) NSArray<NSNumber*> *pids;
 @property (nonatomic) int splashDelay;
 
-@property (strong, nonatomic) NSString *twitter_key;
-@property (strong, nonatomic) NSString *twitter_secret;
-
-@property (strong, nonatomic) NSString *facebook_appid;
-@property (strong, nonatomic) NSString *facebook_secret;
-@property (strong, nonatomic) NSString *facebook_displayName;
-
-@property (strong, nonatomic) NSString *googleplus_clientId;
-
-@property (strong, nonatomic) NSString *disney_clientId;
-@property (strong, nonatomic) NSString *disney_environment;
-
-@property (strong, nonatomic) NSString *instagram_clientId;
-@property (strong, nonatomic) NSString *instagram_secret;
-@property (strong, nonatomic) NSString *instagram_redirectUri;
-
-@property (strong, nonatomic) NSString *comScore_clientId;
-@property (strong, nonatomic) NSString *comScore_secret;
-
-@property (assign, nonatomic) BOOL     app_status_bar_hidden;
 @property (assign, nonatomic) BOOL     notifications_enabled;
 @property (strong, nonatomic) NSString *web_data_mode;
 
 @property (strong, nonatomic) NSString *noConnectionError;
 
 @property (strong, nonatomic) NSString *haKey;
-@property (strong, nonatomic) NSString *nRelicKey;
 
 @property (strong, nonatomic) NSString *appsFlyerKey;
 @property (strong, nonatomic) NSString *appleAppID;
@@ -108,6 +87,5 @@
 @property (assign, nonatomic) BOOL     dev_env;
 @property (assign, nonatomic) BOOL     useOnPageLoaded;
 @property (assign, nonatomic) BOOL     enableQADialog;
-@property (assign, nonatomic) BOOL     useWKWebView;
 
 @end

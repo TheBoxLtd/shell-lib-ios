@@ -10,7 +10,7 @@
     "os": {
         "ios": {
             "location_enabled":true,
-            "autoRotate":false
+            "autoRotate":true
         }
     },
     "social": {

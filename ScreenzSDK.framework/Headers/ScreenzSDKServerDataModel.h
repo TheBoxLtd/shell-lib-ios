@@ -45,7 +45,7 @@
 @property (strong, nonatomic) NSString *type;
 @property (strong, nonatomic) BgImgModel<Optional> *bgimg;
 @property (strong, nonatomic) NSString *bgcolor;
-@property (strong, nonatomic) NSString *media;
+@property (strong, nonatomic) NSString<Optional> *media;
 
 -(UIColor*)getColor;
 @end

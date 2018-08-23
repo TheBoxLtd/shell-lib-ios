@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import "ScreenzSDKConfigModel.h"
 #import "ScreenzSDKAppConfigModel.h"
 #import "ScreenzSDKServerDataModel.h"
@@ -21,6 +22,10 @@
  *
  * @author Sebastian Castro
  */
+
+@protocol ScreenzSDKManagerDelegate
+-(void)ScreenzSDKManagerDelegate_dataReceived:(NSString*)data;
+@end
 
 @interface ScreenzSDKManager : NSObject
 
@@ -81,12 +86,12 @@
 /**
  * Handle the open from url process within the app
  */
--(BOOL)processApplicaitonOpenURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation configurationFile:(NSString*)configFile;
+-(BOOL)processApplicaitonOpenURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation configurationFile:(NSString*)configFile  viewController:(UIViewController*)vc;
 
 /**
  * Handle the open from url process within the app
  */
--(BOOL)processApplicaitonOpenURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options configurationFile:(NSString *)configFile;
+-(BOOL)processApplicaitonOpenURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options configurationFile:(NSString *)configFile  viewController:(UIViewController*)vc;
 
 /**
  * Notifies the manager that something in the configuration has changed
@@ -127,5 +132,17 @@
  */
 -(void)setLaunchPageID:(NSString*)data;
 
+/**
+ * Start the loading process of the UI in the View and View Controller specified
+ *
+ * @param view where the framework UI should be shown
+ * @param view ctroller that host the view
+ */
+-(void)loadInView:(UIView*)view viewController:(UIViewController*)vc;
+
+-(void)reloadWebContainer;
+
+-(void)setDelegate:(id<ScreenzSDKManagerDelegate>)delegate;
+-(id<ScreenzSDKManagerDelegate>)getDelegate;
 @end
 
