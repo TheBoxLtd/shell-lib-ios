@@ -70,4 +70,6 @@
 
 @property (strong, nonatomic) NSString *wvBgColor;
 
+@property (strong, nonatomic) NSArray  *facebook_permissions;
+
 @end

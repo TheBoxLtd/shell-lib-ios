@@ -17,6 +17,8 @@ FOUNDATION_EXPORT const unsigned char ScreenzSDKVersionString[];
 #import <ScreenzSDK/ScreenzSDKSchemeValues.h>
 #import <ScreenzSDK/ScreenzSDKServerDataModel.h>
 #import <ScreenzSDK/ScreenzSDKStorageKeys.h>
+#import <ScreenzSDK/ScreenzSDKBaseViewController.h>
+#import <ScreenzSDK/ScreenzSDKLoadingViewController.h>
 #import <ScreenzSDK/ScreenzSDKMediaUploadModel.h>
 
 /**
@@ -24,26 +26,30 @@ FOUNDATION_EXPORT const unsigned char ScreenzSDKVersionString[];
  *
  * Location Manager 4.3.0 https://github.com/intuit/LocationManager
  *
- * JSONModel 1.7.0 https://github.com/icanzilb/JSONModel
+ * JSONModel 1.2.0 https://github.com/icanzilb/JSONModel
  *
  * AFNetworking 3.2.1 http://afnetworking.com/
  *
  * WebViewJavascriptBridge 6.0.3 https://github.com/marcuswestin/WebViewJavascriptBridge
  * 
- * SDWebImage 4.4.2 https://github.com/rs/SDWebImage
+ * SDWebImage 4.1.0 https://github.com/rs/SDWebImage
  *
- * FCUUID 1.3.1 (UICKeyChainStore 2.1.1)  https://github.com/fabiocaccamo/FCUUID (use Security framework)
+ * FCUUID 1.3.1 (UICKeyChainStore 2.1.1)  https://github.com/fabiocaccamo/FCUUID
  *
  * DDVersion 1.1.2 https://github.com/Dids/DDVersion
  *
  * DDCarrier 1.0.4 https://github.com/Dids/DDCarrier
  *
- * UIAlertController+Blocks 0.9.2 https://github.com/ryanmaxwell/UIAlertController-Blocks
+ * UIAlertView+Blocks 0.9.0 https://github.com/ryanmaxwell/UIAlertView-Blocks
  *
  * NSString-CompareToVersion 0.5.0 https://github.com/stijnster/NSString-compareToVersion
  *
- * MBProgressHUD 1.1.0  https://github.com/jdg/MBProgressHUD
+ * Google Sign-In SDK 4.1.2 https://developers.google.com/identity/sign-in/ios/sdk/
  *
- * AppsFlyer SDK 4.8.8 https://support.appsflyer.com/hc/en-us/articles/207032066-AppsFlyer-SDK-Integration-iOS (use AdSupport and iAd frameworks)
+ * Facebook SDK 4.33.0 https://developers.facebook.com/docs/ios/getting-started#sdk
+ *
+ * AppsFlyer SDK 4.8.5 https://support.appsflyer.com/hc/en-us/articles/207032066-AppsFlyer-SDK-Integration-iOS
+ *
+ * Twitter Kit 3.3.0 https://github.com/twitter/twitter-kit-ios/wiki/Installation
  *
  */
