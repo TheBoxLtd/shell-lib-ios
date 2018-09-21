@@ -166,6 +166,26 @@ Also provides the methods to handle notifications and application launch.
 Besides this methods, the manager store data to be used during the life of the application. As we know, it stores the application configuration but also the server configuration (*serverData*), SDK configuration (*sdkConfiguration*) and scheme values (*schemeValues*).
 
 The Screenz SDK Manager also has a way to set a delegate in order to receive data from the web. For that, you just need to call the *setDelegate* method with an object that conform the *ScreenzSDKManagerDelegate* protocol. When the web send some data back to the app, it will be available in the *ScreenzSDKManagerDelegate_dataReceived* selector.
+
+#### Exit SDK Event
+
+Using the delegate described above, the webview will request to exit with the data **'sdk-exit-new'**.
+You should subscribe to this event, close the sdk when received and handle the views lifecycle accordingly 
+
+#### Sending Data to the webview
+ You can send any data that the webview needs to consume using the following method:
+ 
+```objective-c
+[manager setExtraData:@"data to store"];
+```
+In this example, the webview will have access to "data to store" when is run.
+This data needs to be set before launching the framework
+
+You can also set the page to be opened and pid with these methods:
+ ```objective-c
+[manager setLaunchPageID:@"[PAGEID]"];
+[manager changeCurrentPID:PID];
+```
  
 ### Screenz SDK Storage Keys
 
