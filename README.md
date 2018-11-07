@@ -148,7 +148,7 @@ This JSON file is the one used to configure all the client and server aspects of
 
 **glossary:** *[Array, Optional]* Glossary of terms used in the app that can be configured by the client. Currently only supports the "noConnectionError" message.
 
-**video_upload_key:** *[String, Optional]* API Key for the upload video service (like cameraTag API key).
+**video_upload_key:** *[String, Optional]* API Key for the upload video service.
 
 ## Screenz SDK Components
 
