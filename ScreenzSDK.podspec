@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ScreenzSDK'
-  s.version          = '3.0.5'
+  s.version          = '3.0.6'
   s.summary          = 'Screenz Framework.'
 
 # This description is used to generate tags and improve search results.

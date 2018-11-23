@@ -1,6 +1,6 @@
 {
     "apiBaseURL_prod": "https://origin.tv.scrnz.com/",
-    "webviewURL_prod": "https://api.rtp.scrnz.com/front/mt-webview/",
+    "webviewURL_prod": "https://api.tv.scrnz.com/front/mt-webview/",
     "apiBaseURL_dev": "https://dim-cms.tv.scrnz.com/",
     "webviewURL_dev": "https://dim-cms.tv.scrnz.com/front/mt-webview/",
     "preRegister": "register/1/pre-register",
