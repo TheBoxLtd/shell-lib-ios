@@ -144,5 +144,7 @@
 
 -(void)setDelegate:(id<ScreenzSDKManagerDelegate>)delegate;
 -(id<ScreenzSDKManagerDelegate>)getDelegate;
-@end
 
+-(BOOL)processNavigationBarData:(NSString*)data;
+
+@end
