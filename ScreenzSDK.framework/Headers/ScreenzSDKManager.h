@@ -147,4 +147,6 @@
 
 -(BOOL)processNavigationBarData:(NSString*)data;
 
+-(void)clearView;
+
 @end
