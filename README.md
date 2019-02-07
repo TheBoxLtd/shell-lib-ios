@@ -172,6 +172,11 @@ The Screenz SDK Manager also has a way to set a delegate in order to receive dat
 Using the delegate described above, the webview will request to exit with the data **'sdk-exit-new'**.
 You should subscribe to this event, close the sdk when received and handle the views lifecycle accordingly 
 
+In addition to this, an optional extra call is available to cleanup any objects the sdk may be holding in memory as follows:
+```objective-c
+[manager clearView];
+```
+
 #### Sending Data to the webview
  You can send any data that the webview needs to consume using the following method:
  
