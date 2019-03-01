@@ -30,7 +30,7 @@ FOUNDATION_EXPORT const unsigned char ScreenzSDKVersionString[];
  *
  * WebViewJavascriptBridge 6.0.3 https://github.com/marcuswestin/WebViewJavascriptBridge
  * 
- * SDWebImage 4.4.5 https://github.com/rs/SDWebImage
+ * SDWebImage 4.4.6 https://github.com/rs/SDWebImage
  *
  * FCUUID 1.3.1 https://github.com/fabiocaccamo/FCUUID (use Security framework)
  *
@@ -46,6 +46,6 @@ FOUNDATION_EXPORT const unsigned char ScreenzSDKVersionString[];
  *
  * MBProgressHUD 1.1.0 https://github.com/jdg/MBProgressHUD
  *
- * AppsFlyer SDK 4.8.11 https://support.appsflyer.com/hc/en-us/articles/207032066-AppsFlyer-SDK-Integration-iOS (use AdSupport and iAd frameworks)
+ * AppsFlyer SDK 4.8.12 https://support.appsflyer.com/hc/en-us/articles/207032066-AppsFlyer-SDK-Integration-iOS (use AdSupport and iAd frameworks)
  *
  */
