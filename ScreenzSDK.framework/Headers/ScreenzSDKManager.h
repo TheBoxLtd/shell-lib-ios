@@ -149,4 +149,6 @@
 
 -(void)clearView;
 
+-(NSString*)getLaunchPageID;
+
 @end

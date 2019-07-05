@@ -46,6 +46,6 @@ FOUNDATION_EXPORT const unsigned char ScreenzSDKVersionString[];
  *
  * MBProgressHUD 1.1.0 https://github.com/jdg/MBProgressHUD
  *
- * AppsFlyer SDK 4.8.12 https://support.appsflyer.com/hc/en-us/articles/207032066-AppsFlyer-SDK-Integration-iOS (use AdSupport and iAd frameworks)
+ * AppsFlyer SDK 4.9.0 https://support.appsflyer.com/hc/en-us/articles/207032066-AppsFlyer-SDK-Integration-iOS (use AdSupport and iAd frameworks)
  *
  */
