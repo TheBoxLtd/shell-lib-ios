@@ -1,0 +1,23 @@
+kernel vec4 coreImageKernel(__sample image, vec4 light, vec4 dark, float intensity) {
+  vec4 color = clamp(image, 0.0, 1.0);
+  color = unpremultiply(color);
+  color = clamp(color, 0.0, 1.0); // necessary to get rid of all extended sRGB issues with OpenGL ES
+
+  // Apply intensity as "symmetric gamma"
+  if (intensity > 0.0) {
+    color.rgb = 1.0 - pow(1.0 - color.rgb, vec3(max(intensity + 1.0, 0.0000001)));
+  } else {
+    color.rgb = pow(color.rgb, vec3(max(-intensity + 1.0, 0.0000001)));
+  }
+
+  // Colorimetric (perceptual luminance-preserving) RGB to grayscale conversion
+  // https://en.wikipedia.org/wiki/Grayscale#Colorimetric_(perceptual_luminance-preserving)_conversion_to_grayscale
+  const vec3 rgb2gray = vec3(0.2126, 0.7152, 0.0722);
+  float luminance = dot(rgb2gray, color.rgb);
+
+  // Apply DuoTone
+  vec4 duotone = mix(dark, light, clamp(luminance, 0.0, 1.0));
+  duotone.a *= color.a;
+
+  return premultiply(duotone);
+}

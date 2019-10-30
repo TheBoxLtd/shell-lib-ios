@@ -8,6 +8,13 @@
 
 #import "JSONModel.h"
 
+@protocol StickerModel;
+
+@interface StickerModel : JSONModel
+@property (strong, nonatomic) NSString *name;
+@property (strong, nonatomic) NSString *url;
+@end
+
 @interface ScreenzSDKMediaUploadModel : JSONModel
 @property (strong, nonatomic) NSString *camera_uuid;
 @property (strong, nonatomic) NSString *api_key;
@@ -20,6 +27,7 @@
 @property (strong, nonatomic) NSString *minLengthError;
 @property (strong, nonatomic) NSString *maxLengthError;
 @property (strong, nonatomic) NSString *genericError;
+@property (strong, nonatomic) NSArray<StickerModel> *stickersList;
 @property (strong, nonatomic) NSDictionary *metadata;
 
 -(NSString*)getUrl;

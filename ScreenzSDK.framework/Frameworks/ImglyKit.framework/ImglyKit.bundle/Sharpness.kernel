@@ -1,0 +1,19 @@
+kernel vec4 coreImageKernel(sampler u_image, float u_sharpness) {
+  vec4 color = clamp(sample(u_image, samplerCoord(u_image)), 0.0, 1.0);
+  float factor = mix(0.2, -1.0, float(u_sharpness > 0.0));
+  vec4 sharpenedColor = mix(0.2, 5.0, float(u_sharpness > 0.0)) * color;
+
+  sharpenedColor += factor * clamp(sample(u_image, samplerTransform(u_image, destCoord() + vec2(-1.0, 0.0))), 0.0, 1.0);
+  sharpenedColor += factor * clamp(sample(u_image, samplerTransform(u_image, destCoord() + vec2(0.0, -1.0))), 0.0, 1.0);
+  sharpenedColor += factor * clamp(sample(u_image, samplerTransform(u_image, destCoord() + vec2(0.0, 1.0))), 0.0, 1.0);
+  sharpenedColor += factor * clamp(sample(u_image, samplerTransform(u_image, destCoord() + vec2(1.0, 0.0))), 0.0, 1.0);
+
+  sharpenedColor = unpremultiply(sharpenedColor);
+  sharpenedColor = clamp(sharpenedColor, 0.0, 1.0);
+
+  color = unpremultiply(color);
+  color = clamp(mix(color, sharpenedColor, abs(u_sharpness)), 0.0, 1.0);
+  color = premultiply(color);
+
+  return color;
+}
