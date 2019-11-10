@@ -1,5 +1,5 @@
 # Screenz SDK
-## [~>3.0]
+## [~>4.0]
 
 Screenz SDK allows you to implement your own Screenz client that will live in the Screenz environment.
 
@@ -15,6 +15,20 @@ In order to make your own Screenz client we will guide you through the following
 First of all create the single view application in Xcode. After that you must add the ScreenzSDK.framework to the project like the following screenshot
 
 ![](http://www.mvdforge.com/images/screenz_projectConfigScreen.png)
+
+#### Adding Build Phase Script
+
+In order for the sdk to work correctly, it is needed to sign it at the end of the build process.
+For this add the following 'Run Script' as the last step in the project build phases:
+
+```sh
+pushd "${TARGET_BUILD_DIR}"/"${PRODUCT_NAME}".app/Frameworks/ScreenzSDK.framework/Frameworks
+for EACH in *.framework; do
+/usr/bin/codesign --force --deep --sign "${EXPANDED_CODE_SIGN_IDENTITY}" --entitlements "${TARGET_TEMP_DIR}/${PRODUCT_NAME}.app.xcent" --timestamp=none $EACH
+done
+popd
+echo "BUILD DIR ${TARGET_BUILD_DIR}"
+```
 
 **Important:** the framework requires iOS 9.0+, so remember to set "Deployment Target" to 9.0 or higher.
 
