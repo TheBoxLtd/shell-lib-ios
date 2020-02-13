@@ -19,10 +19,10 @@ FOUNDATION_EXPORT const unsigned char ScreenzSDKVersionString[];
 #import <ScreenzSDK/ScreenzSDKStorageKeys.h>
 #import <ScreenzSDK/ScreenzSDKMediaUploadModel.h>
 
-/**
+/*
  * - Libraries versions -
  *
- * Location Manager 4.3.2 https://github.com/intuit/LocationManager
+ * Location Manager 4.4.0 https://github.com/intuit/LocationManager
  *
  * JSONModel 1.8.0 https://github.com/icanzilb/JSONModel
  *
@@ -30,7 +30,7 @@ FOUNDATION_EXPORT const unsigned char ScreenzSDKVersionString[];
  *
  * WebViewJavascriptBridge 6.0.3 https://github.com/marcuswestin/WebViewJavascriptBridge
  * 
- * SDWebImage 4.4.6 https://github.com/rs/SDWebImage
+ * SDWebImage 5.5 https://github.com/rs/SDWebImage
  *
  * FCUUID 1.3.1 https://github.com/fabiocaccamo/FCUUID (use Security framework)
  *
@@ -44,10 +44,10 @@ FOUNDATION_EXPORT const unsigned char ScreenzSDKVersionString[];
  *
  * NSString-CompareToVersion 0.6 https://github.com/stijnster/NSString-compareToVersion
  *
- * MBProgressHUD 1.1.0 https://github.com/jdg/MBProgressHUD
+ * MBProgressHUD 1.2.0 https://github.com/jdg/MBProgressHUD
  *
- * Photo Editor SDK 10.2.0 https://github.com/imgly/pesdk-ios-build/releases/latest
+ * Photo Editor SDK 10.7.2 https://github.com/imgly/pesdk-ios-build/releases/latest
  *
- * AppsFlyer SDK 4.9.0 https://support.appsflyer.com/hc/en-us/articles/207032066-AppsFlyer-SDK-Integration-iOS (use AdSupport and iAd frameworks)
+ * AppsFlyer SDK 5.1.0 https://support.appsflyer.com/hc/en-us/articles/207032066-AppsFlyer-SDK-Integration-iOS (use AdSupport and iAd frameworks)
  *
  */

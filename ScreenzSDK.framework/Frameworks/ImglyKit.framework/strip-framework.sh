@@ -1,5 +1,5 @@
-# This file is part of the PhotoEditor Software Development Kit.
-# Copyright (C) 2016-2019 img.ly GmbH <contact@img.ly>
+# This file is part of an img.ly Software Development Kit.
+# Copyright (C) 2016-2020 img.ly GmbH <contact@img.ly>
 # All rights reserved.
 # Redistribution and use in source and binary forms, without
 # modification, are permitted provided that the following license agreement
@@ -47,7 +47,7 @@ for framework in "${frameworks[@]}"; do
 
   if [[ "${ACTION}" == "install" ]]; then
     # Removing files that are not needed in the final product
-    for file in strip-framework.sh PhotoEditorSDK-LICENSE.md VideoEditorSDK-LICENSE.md; do
+    for file in strip-framework.sh ImglyKit-LICENSE.md PhotoEditorSDK-LICENSE.md VideoEditorSDK-LICENSE.md; do
       if [[ -e "${framework_folder}/${file}" ]]; then
         echo "Removing ${file} from product"
         rm -f "${framework_folder}/${file}"
