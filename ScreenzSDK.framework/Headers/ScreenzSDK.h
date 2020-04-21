@@ -46,7 +46,7 @@ FOUNDATION_EXPORT const unsigned char ScreenzSDKVersionString[];
  *
  * MBProgressHUD 1.2.0 https://github.com/jdg/MBProgressHUD
  *
- * Photo Editor SDK 10.7.3 https://github.com/imgly/pesdk-ios-build/releases/latest
+ * Photo Editor SDK 10.10.0 https://github.com/imgly/pesdk-ios-build/releases/latest
  *
  * AppsFlyer SDK 5.1.0 https://support.appsflyer.com/hc/en-us/articles/207032066-AppsFlyer-SDK-Integration-iOS (use AdSupport and iAd frameworks)
  *
